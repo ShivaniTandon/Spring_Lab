@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean class="com.capg.spring.beans.Sbu" id="sbu">
+<property name="sbuId" value="PES-BU"></property>
+<property name="sbuName" value="Product Engineering Services"></property>
+<property name="sbuHead" value="Kiran Rao"></property>
+</bean>  
+  
+<bean class="com.capg.spring.beans.Employee" id="emp">  
+<property name="employeeId" value="12345"></property>  
+<property name="employeeName" value="Harriet"></property>  
+<property name="salary" value="40000.0"></property>
+<property name="sbuDetails" ref="sbu"></property>
+<property name="age" value="30"></property>
+</bean>  
+  
+</beans> 
